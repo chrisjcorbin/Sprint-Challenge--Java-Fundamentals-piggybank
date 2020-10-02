@@ -23,9 +23,42 @@ Commit your code regularly and meaningfully. This helps both you (in case you ev
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
 
 1. Explain how you took advantage of Java's Object Oriented approach to solve the sprint challenge.
+I logically broke down what the project required object wise and create those within the class.
+
 2. Explain the three steps needed to run a Java application (using the JDK) including what each step does and how those step correlate to running a JavaScript application.
+From the Command Line in your preferred operating system, the JDK can be used to compile, archive & compress, and run the desired application. Examples of these processes are as follows:
+
+Compiles source files into class files that the jvm understands.
+> javac exampleApp/*.java
+
+Designed for packaging Java applets or applications into a single compressed archive.
+A further breakdown of jar switch usage with this command is as follows:
+* c – create new archive file with given name
+* v – generate verbose output
+* f – specifies the jar output file to be created
+* e – sets the main class also called the entry point
+> jar cvfe exampleapp.jar exampleApp.Main exampleApp/*.class
+
+This simply creates the Java runtime environment and runs your application. Javaw can be used as well, however, it is not nearly as helpful with finding errors as it will not display console output.
+> java -jar exampleapp.jar
+
+JavaScript does not require these compiling, archiving and compression steps to run.
+
 3. Explain how Java being a strongly typed language affected you solution.
+My solution was not impacted by Java being more strict than other languages. I prefer this strict structure as it matches my way of thinking.
+
 4. Can you explain the differences between Abstract Classes and Interfaces including how they are used in your application?
+The biggest difference between Abstract Classes and Interfaces is that Abstract Classes can have abstract and non-abstract methods. Interfaces can only have abstract methods.
+
+Consider using abstract classes if any of these statements apply to your situation:
+-In java application, there are some related classes that need to share some lines of code then you can put these lines of code within abstract class and this abstract class should be extended by all these related classes.
+-You can define non-static or non-final field(s) in abstract class, so that via a method you can access and modify the state of Object to which they belong.
+-You can expect that the classes that extend an abstract class have many common methods or fields, or require access modifiers other than public (such as protected and private).
+
+Consider using interfaces if any of these statements apply to your situation:
+-It is total abstraction, All methods declared within an interface must be implemented by the class(es) that implements this interface.
+-A class can implement more than one interface. It is called multiple inheritance.
+-You want to specify the behavior of a particular data type, but not concerned about who implements its behavior.
 
 ## Instructions
 
